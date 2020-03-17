@@ -45,9 +45,17 @@ input,textarea{
     border-radius: 10px;
     cursor: text;
     border-color: $gray;
-    align-content: flex-start;
+   
 
 }
+
+select{
+border: 1.5px solid $gray;
+    border-radius: 10px;
+    cursor: text;
+    border-color: $gray;
+}  
+
 
 
 input::placeholder{

@@ -1,0 +1,65 @@
+div.publicacion {
+  margin-left: 10em;
+  div {
+    display: flex;
+    align-items: center;
+    width: 60em;
+  }
+
+  svg {
+    width: 2vw;
+    max-height: 2vw;
+  }
+
+  div.encabezado {
+    h2 {
+      font-size: 2em;
+      font: bold;
+    }
+
+    svg {
+      margin-left: 1em;
+    }
+  }
+
+  div.tituloseccion {
+      justify-content: flex-end;
+    margin-bottom: 1.5em;
+    div.titulo {
+      input {
+        height: 2.5em;
+        width: 50em;
+      }
+    }
+    div.seccion {
+        justify-content: flex-end;
+        svg {
+            margin-left: .5em;
+          }
+      select {
+        margin-left: 2em;
+        height: 2.8em;
+        width: 15em;
+      }
+    }
+  }
+
+  div.contenido{
+      justify-content: flex-end;
+      margin-bottom: 2em;
+      input{
+          width:80em;
+          height: 30em;
+      }
+  }
+
+  div.boton{
+    justify-content: flex-end;
+    margin-bottom: 2em;
+    Button{
+        height: 3em;
+width: 15em;
+font: bold;
+    }
+  }
+}
