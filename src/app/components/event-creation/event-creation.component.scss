@@ -1,0 +1,104 @@
+div.evento {
+  margin-left: 10em;
+
+  div {
+    display: flex;
+    align-items: center;
+    width: 35em;
+  }
+
+  svg {
+    width: 2vw;
+    max-height: 2vw;
+  }
+  
+
+
+  div.encabezado {
+    h2 {
+      font-size: 2em;
+      font: bold;
+    }
+
+    svg{
+        margin-left: 1em;
+    }
+  }
+
+  div.nombre {
+    margin-bottom: 1em; 
+    justify-content: flex-end;
+
+    input {
+    
+    width: 50em;
+      height: 2.5em;
+    }
+  }
+
+
+  div.fechahora {
+      justify-content: space-between;
+    margin-bottom: 1em;
+    svg {
+      margin-right: 0.5em;
+    }
+    input {
+      height: 2.5em;
+      width: 17em;
+     
+    }
+    svg.hora {
+      margin-left: 1em;
+    }
+    input#hora{
+        width:17em;
+        
+    }
+  }
+
+
+  div.ubicacion {
+      justify-content: flex-end;
+    margin-bottom: 1em;
+    svg {
+      margin-right: 0.7em;
+    }
+    input {
+      width: 44em;
+      height: 2.5em;
+    }
+  }
+
+
+  div.imagen {
+    margin-bottom: 1em;
+    svg {
+      margin-right: 0.5em;
+    }
+    Button{
+        height: 2.5em;
+        width: 10em;
+    }
+  }
+
+
+  div.descripcion {
+    margin-bottom: 1em;
+    justify-content: flex-end;
+    input {
+      width: 50em;
+      height: 10em;
+    }
+  }
+ 
+  div.publicar{
+      justify-content: flex-end;
+      margin-bottom: 2em;
+      Button{
+          height: 3em;
+width: 15em;
+font: bold;
+      }
+  }
+}

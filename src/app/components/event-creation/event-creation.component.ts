@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventCreationComponent implements OnInit {
 
+
+  mensaje="pinche coronavirus"
+
   constructor() { }
 
   ngOnInit(): void {

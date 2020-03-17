@@ -9,7 +9,7 @@ body, html{
 
 *{
     font-family: 'Roboto', sans-serif;
-    outline: none !important;
+    //: none !important;
 }
 
 .bg-blue{
@@ -29,18 +29,30 @@ body, html{
 .btn{
     background: $blue;
     border: 1.5px solid $blue;
-    border-radius: 15px;
+    border-radius: 8px;
     color: white;
     cursor: pointer;
 }
 .btn:hover{
     background: none;
     color: $blue;
+    border: 1.5px solid $blue;
+    border-radius: 8px;
+    
 }
 input,textarea{
-    border: $gray;
-    border-radius: 15px;
+    border: 1.5px solid $gray;
+    border-radius: 10px;
     cursor: text;
+    border-color: $gray;
+    align-content: flex-start;
+
+}
+
+
+input::placeholder{
+    padding: 1em;
+    
 }
 
 router-outlet{
