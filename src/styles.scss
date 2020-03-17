@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+$blue : #21B2EC;
+$gray : #707070;
+
+body, html{
+    margin: 0;padding: 0;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    outline: none !important;
+}
+
+.bg-blue{
+    background: $blue;
+}
+.color-blue{
+    color: $blue;
+}
+.bg-gray{
+    background: $gray;
+}
+.color-gray{
+    color: $gray;
+}
+
+
+.btn{
+    background: $blue;
+    border: 1.5px solid $blue;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+}
+.btn:hover{
+    background: none;
+    color: $blue;
+}
+input,textarea{
+    border: $gray;
+    border-radius: 15px;
+    cursor: text;
+}
+
+router-outlet{
+    z-index: 10;
+}

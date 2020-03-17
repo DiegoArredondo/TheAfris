@@ -1,0 +1,44 @@
+div.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 7.5vw;
+
+    svg.logo{
+        width: 6vw;
+        max-height: 6vw !important;
+        position: absolute;
+        left: 5vw;
+        path{fill: #FFF !important;}
+    }
+
+    div.upper{
+        flex-grow: 1;
+        display: flex;
+        padding-left: calc(14vw - 5px);
+        align-items: flex-end;
+        
+        a{
+            text-decoration: none;
+            margin: 5px;
+
+            img{
+                height: 25px;
+                width: 25px;
+            }
+        }
+    }
+    div.lower{
+        flex-grow: 1;
+        display: flex;
+        width: 100vw;
+        border-top: 1px solid #FFF;
+
+        span{
+            margin: 10px;
+            margin-left: 14vw;
+            color: #FFF;
+        }
+    }
+}

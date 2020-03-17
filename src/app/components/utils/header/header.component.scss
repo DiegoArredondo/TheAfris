@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css?family=Arvo&display=swap");
+
+nav.navbar {
+  background-image: url("/assets/bg-cartoon.jpeg");
+  background-repeat: repeat;
+  display: flex;
+  align-items: flex-start;
+
+  div.logo {
+    width: 20%;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 25vh;
+    border-bottom-right-radius: 11vh;
+
+    h1.afris-brand {
+      margin: 0;
+      font-size: 6rem;
+      display: flex;
+      align-items: center;
+      position: absolute;
+      z-index: 20;
+      padding-bottom: 2vh;
+      left: 3vh;
+      color: #FFF;
+      span {
+        font-size: 4rem;
+        h2 {
+          font-size: 0.9rem;
+          margin: 0;
+          margin-top: -1rem;
+          margin-left: 0.3rem;
+        }
+      }
+    }
+
+    svg {
+      z-index: 15;
+      height: 20vh;
+      width: 20vh;
+      margin: 7.5px;
+      path {
+        fill: rgba($color: #fff, $alpha: 0.43) !important;
+      }
+    }
+  }
+  div.innernav {
+    width: 80%;
+    display: inline-flex;
+    flex-direction: row;
+    div.links {
+      width: 80%;
+      display: inline-flex;
+        align-items: center;
+      a {
+        color: white;
+        text-decoration: none;
+        margin: 0 3vh;
+        padding: 2vh;
+      }
+    }
+    div.user {
+      width: 20%;
+      display: inline-flex;
+      align-items: center;
+      img{
+          height: 8vh;
+          max-width: 8vh;
+          margin: 1vh;
+      }
+    }
+  }
+}
+
+.menu-font {
+  font-family: "Arvo", serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+}
