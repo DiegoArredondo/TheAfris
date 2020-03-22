@@ -26,7 +26,8 @@ mat-form-field {
         padding: 1px 1em;
         width: auto;
         flex-grow: 1;
-        width: calc(100% - 1em - 3px);
+        width: calc(100% - 2em - 3px);
+        font-size: .8334em !important;
       }
     }
 
@@ -43,6 +44,12 @@ mat-calendar {
   .mat-calendar-body-selected {
     background-color: $blue !important;
   }
+}
+
+ngx-material-timepicker-container{
+    input{
+        border: none !important;
+    }
 }
 
 body {

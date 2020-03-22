@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl} from '@angular/forms';
 import { MatDatepicker } from '@angular/material/datepicker';
+import {NgxMaterialTimepickerComponent} from 'ngx-material-timepicker';
 
 @Component({
   selector: 'app-event-creation',
@@ -19,6 +20,9 @@ export class EventCreationComponent implements OnInit {
 
 
   _openCalendar(picker: MatDatepicker<Date>) {
+    picker.open();
+  }
+  _openTimer(picker: NgxMaterialTimepickerComponent) {
     picker.open();
   }
 }

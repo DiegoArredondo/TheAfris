@@ -33,12 +33,12 @@
                     [value]="date.value" readonly (click)="_openCalendar(picker)">
                 <mat-datepicker-toggle matSuffix [for]="picker"> 00 / 00 / 00
                 </mat-datepicker-toggle>
-                <mat-datepicker disabled="false" #picker touchUi ></mat-datepicker>
+                <mat-datepicker disabled="false" #picker touchUi></mat-datepicker>
             </mat-form-field>
         </div>
 
         <div class="hora half-container">
-            <div class="svg-container">
+            <div class="svg-container" (click)="_openTimer(defaultValueTimePicker)">
                 <svg class="hora" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                     width="256pt" height="256pt" viewBox="0 0 256 256" version="1.1">
                     <g id="surface24965141">
@@ -48,7 +48,8 @@
                     </g>
                 </svg>
             </div>
-            <input type="time" id="hora" name="hora" value="Hora">
+            <input aria-label="default time" [ngxTimepicker]="defaultValueTimePicker" [value]="'05:11 pm'" readonly>
+            <ngx-material-timepicker #defaultValueTimePicker></ngx-material-timepicker>
         </div>
 
 
@@ -76,7 +77,7 @@
         <input type="text" id="ubicacion" name="ubicacion" placeholder="Ubicación*">
     </div>
 
-    <div class="imagen">
+    <!-- <div class="imagen">
         <div class="svg-container">
             <svg xmlns="http://www.w3.org/2000/svg" height="512px" viewBox="0 -21 511.98744 511" width="512px">
                 <g>
@@ -93,7 +94,7 @@
             </svg>
         </div>
         <button type="button" class="btn">Cargar Imagen</button>
-    </div>
+    </div> -->
 
     <div class="descripcion full-container">
         <!-- <input type="text" id="descripcion" name="descripcion" placeholder="Descripción*"> -->
