@@ -1,68 +1,124 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
 
-$blue : #21B2EC;
-$gray : #707070;
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
-body, html{
-    margin: 0;padding: 0;
+$blue: #21b2ec;
+$gray: #707070;
+
+mat-form-field {
+  width: 100%;
+  flex-grow: 1;
+}
+.mat-form-field-wrapper {
+  padding: 0 !important;
+  .mat-form-field-flex {
+    padding: 0 !important;
+    background-color: transparent !important;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    .mat-form-field-infix {
+      padding: 0;
+      margin: 0;
+      border: none;
+
+      input {
+        padding: 1px 1em;
+        width: auto;
+        flex-grow: 1;
+        width: calc(100% - 1em - 3px);
+      }
+    }
+
+    svg {
+      color: $blue;
+    }
+  }
+  .mat-form-field-underline {
+    display: none;
+  }
 }
 
-*{
-    font-family: 'Roboto', sans-serif;
-    //: none !important;
+mat-calendar {
+  .mat-calendar-body-selected {
+    background-color: $blue !important;
+  }
 }
 
-.bg-blue{
-    background: $blue;
-}
-.color-blue{
-    color: $blue;
-}
-.bg-gray{
-    background: $gray;
-}
-.color-gray{
-    color: $gray;
+body {
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
 }
 
-
-.btn{
-    background: $blue;
-    border: 1.5px solid $blue;
-    border-radius: 8px;
-    color: white;
-    cursor: pointer;
-}
-.btn:hover{
-    background: none;
-    color: $blue;
-    border: 1.5px solid $blue;
-    border-radius: 8px;
-    
-}
-input,textarea{
-    border: 1.5px solid $gray;
-    border-radius: 10px;
-    cursor: text;
-    border-color: $gray;
-   
-
+* {
+  font-family: "Roboto", sans-serif;
+  outline: none !important;
 }
 
-select{
-border: 1.5px solid $gray;
-    border-radius: 10px;
-    cursor: text;
-    border-color: $gray;
-}  
-
-
-
-input::placeholder{
-    padding: 1em;
-    
+.bg-blue {
+  background: $blue;
+}
+.color-blue {
+  color: $blue;
+}
+.bg-gray {
+  background: $gray;
+}
+.color-gray {
+  color: $gray;
 }
 
-router-outlet{
-    z-index: 10;
+.btn {
+  background: $blue;
+  border: 1.5px solid $blue;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+.btn:hover {
+  background: none;
+  color: $blue;
+  border: 1.5px solid $blue;
+  border-radius: 8px;
+}
+input,
+textarea {
+  border: 1.5px solid $gray !important;
+  border-radius: 10px !important;
+  border-color: $gray !important;
+  padding: 1px 1em;
+}
+textarea {
+  padding: 1em;
+  resize: none;
+}
+
+select {
+  border: 1.5px solid $gray;
+  border-radius: 10px;
+  cursor: text;
+  border-color: $gray;
+}
+
+div.outlet{
+    padding: 5vh 0;
+    background-image: url("assets/dibujo.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-y: 23vh;
+    background-position-x: 68vw;
+    background-size: 70vh;
+}
+router-outlet {
+  z-index: 10;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }

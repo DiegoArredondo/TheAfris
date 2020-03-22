@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl} from '@angular/forms';
+import { MatDatepicker } from '@angular/material/datepicker';
 
 @Component({
   selector: 'app-event-creation',
@@ -8,11 +10,15 @@ import { Component, OnInit } from '@angular/core';
 export class EventCreationComponent implements OnInit {
 
 
-  mensaje="pinche coronavirus"
+  date = new FormControl(new Date());
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+
+  _openCalendar(picker: MatDatepicker<Date>) {
+    picker.open();
+  }
 }
