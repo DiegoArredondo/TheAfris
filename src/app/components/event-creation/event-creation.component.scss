@@ -12,6 +12,15 @@ div.evento {
     }
   }
 
+  div.hora {
+    span{
+      margin-left: 3.5em;
+    }
+    input {
+      background: none;
+    }
+  }
+
   div.imagen {
     display: flex;
     align-items: center;

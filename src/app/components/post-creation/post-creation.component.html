@@ -23,8 +23,9 @@
         </div>
 
         <div class="seccion full-container">
+            <span class="placeholder" *ngIf="!f.seccion.value">Selecciona una sección</span>
             <select id="Sección" [ngClass]="{'border-red': (submitted && f.seccion.errors && f.seccion.errors.required)}"
-            formControlName="seccion" required>
+            formControlName="seccion" required value="--Select--">
                 <option style="display:none;" selected>Sección*</option>
                 <option value="general">General</option>
                 <option value="cultular">Cultural</option>

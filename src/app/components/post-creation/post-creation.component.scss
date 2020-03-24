@@ -50,3 +50,12 @@ textarea {
   height: 25vh;
   flex-grow: 1;
 }
+
+select{
+  background: none;
+  height: 2.5em;
+}
+
+select, input{
+  font-size: .86em;
+}

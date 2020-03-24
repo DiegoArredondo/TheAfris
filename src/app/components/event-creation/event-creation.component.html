@@ -46,6 +46,7 @@
                         </g>
                     </svg>
                 </div>
+                <span class="placeholder" *ngIf="!f.hora.value">Seleccione la hora</span>
                 <input [ngClass]="{'border-red': (submitted && f.hora.errors && f.hora.errors.required)}"
                     aria-label="default time" [ngxTimepicker]="defaultValueTimePicker" [value]="time" readonly
                     formControlName="hora" required>

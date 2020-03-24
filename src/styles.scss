@@ -107,7 +107,13 @@ textarea {
   padding: 1em;
   resize: none;
 }
-
+span.placeholder{
+  position: absolute;
+  margin-left: 1em;
+  z-index: -1;
+  font-size: .86em;
+  color: #757575;
+}
 
 div.outlet{
     padding: 5vh 15vw;
