@@ -20,6 +20,7 @@ import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 import { MaterialModule } from './material.module';
 
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,11 +37,13 @@ import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatNativeDateModule,
     MaterialModule,
-    NgxMaterialTimepickerModule
+    NgxMaterialTimepickerModule.setLocale('es-419')
   ],
   providers: [
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },

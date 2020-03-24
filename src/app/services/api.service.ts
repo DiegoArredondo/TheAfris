@@ -8,6 +8,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ApiService {
 
+  static createEventUrl = "postEvent"
+  static updateEventUrl = "postEvent"
+  static deleteEventUrl = "postEvent"
+  static createPostUrl = "postPost"
+  static updatePostUrl = "postPost"
+  static deletePostUrl = "postPost"
+
+
   private baseUrl: string = " https://theafrisback.appspot.com/";
 
   constructor(private httpClient: HttpClient) { }

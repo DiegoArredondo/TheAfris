@@ -1,59 +1,62 @@
-
-div.evento{
+div.evento {
   width: 40vw;
-  margin: 0 15vw;
 
-  div.encabezado{
+  div.encabezado {
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    svg {
+      width: 2vw;
+      max-height: 2vw;
+    }
   }
 
-  div.imagen{
+  div.imagen {
     display: flex;
     align-items: center;
-    button{
+    button {
       width: 12.5em;
       height: 2.5em;
     }
   }
 
-  div.publicar{
+  div.publicar {
     justify-content: flex-end !important;
-    button{
+    button {
       width: 12.5em;
       height: 2.5em;
     }
   }
 
-  div.full-container{
+  div.full-container {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: .75rem 0;
+    margin: 0.75rem 0;
   }
 
-  div.half-container{
+  div.half-container {
     width: 47.5%;
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  input{
+  input {
     height: 2.5em !important;
     flex-grow: 1;
+    width: calc(100% - 2em);
   }
 
-  textarea{
+  textarea {
     height: 25vh;
     flex-grow: 1;
   }
 }
 
-
-div.svg-container{
+div.svg-container {
   width: 2.5em !important;
   height: 2.5em !important;
   display: inline-flex !important;

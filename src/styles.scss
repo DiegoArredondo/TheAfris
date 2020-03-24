@@ -76,6 +76,12 @@ body {
 .color-gray {
   color: $gray;
 }
+.color-red{
+ color: #f20000 !important;
+}
+.border-red{
+  border-color: #f20000 !important;
+}
 
 .btn {
   background: $blue;
@@ -91,7 +97,7 @@ body {
   border-radius: 8px;
 }
 input,
-textarea {
+textarea, select {
   border: 1.5px solid $gray !important;
   border-radius: 10px !important;
   border-color: $gray !important;
@@ -102,15 +108,9 @@ textarea {
   resize: none;
 }
 
-select {
-  border: 1.5px solid $gray;
-  border-radius: 10px;
-  cursor: text;
-  border-color: $gray;
-}
 
 div.outlet{
-    padding: 5vh 0;
+    padding: 5vh 15vw;
     background-image: url("assets/dibujo.svg");
     background-repeat: no-repeat;
     background-position: right;
