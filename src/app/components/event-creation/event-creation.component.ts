@@ -53,7 +53,6 @@ export class EventCreationComponent implements OnInit {
   // Un getter conveniente para un fácil acceso a los datos de los campos del formulario
   get f() { return this.createEventForm.controls; }
 
-
   _openCalendar(picker: MatDatepicker<Date>) {
     picker.open();
   }
