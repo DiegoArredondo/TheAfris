@@ -28,6 +28,8 @@ export class PostCreationComponent implements OnInit {
     "seccion": 1
   } as Publicacion;
 
+  posted: boolean = false;
+
 
   constructor(private formBuilder: FormBuilder, private apiService: ApiService) {
     // Preguntar si quieren tener hora predeterminada
@@ -51,7 +53,8 @@ export class PostCreationComponent implements OnInit {
     this.submitted = true;
 
     // Se detiene aquí si el formulario es inválido 
-    if (this.createPostForm.invalid) {
+    if (this.createPostForm.invalid || this.posted) {
+      this.posted = false;
       return;
     }
 
@@ -63,6 +66,7 @@ export class PostCreationComponent implements OnInit {
       "seccion": 1
     } as Publicacion;
 
+    this.posted = true;
     this.apiService.post(ApiService.createPostUrl, publicacion).subscribe(data => {
       debugger;
       if (data.error) {

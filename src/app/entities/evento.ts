@@ -3,7 +3,7 @@ export class Evento {
     titulo: string
     descripcion: string
     etiquetas: string
-    fechaHora: Date
+    fechaHora: string
     duracion?: string
     cupo?: Number
     ubicacion: string

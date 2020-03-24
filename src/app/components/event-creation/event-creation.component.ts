@@ -21,10 +21,12 @@ export class EventCreationComponent implements OnInit {
   date = new FormControl(new Date());
   time: String;
 
+  posted: boolean = false;
+
   eventoMockup = {
     "titulo": "Titulo del evento",
     "descripcion": "Descripcion de prueba",
-    "fechaHora": new Date(),
+    "fechaHora": "2020-04-20 12:00:17",
     "etiquetas": "#etiqueta1,#etiqueta2,#etiqueta3",
     "duracion": "5 dias",
     "creador": 1,
@@ -68,7 +70,7 @@ export class EventCreationComponent implements OnInit {
     if (this.time.indexOf("PM") != -1) horaNum += 12; // Si es pm
     let minutosStr = time.split(":")[1].split(" ")[0];
     let minutosNum = Number.parseInt(minutosStr);
-    this.eventoMockup.fechaHora.setHours(horaNum, minutosNum);
+    this.date.value.setHours(horaNum, minutosNum);
   }
 
   onSubmit() {
@@ -77,28 +79,35 @@ export class EventCreationComponent implements OnInit {
     this.submitted = true;
 
     // Se detiene aquí si el formulario es inválido 
-    if (this.createEventForm.invalid) {
+    if (this.createEventForm.invalid || this.posted) {
+      this.posted = false;
       return;
     }
+
+    let d = (this.date.value as Date).toLocaleDateString().split("/")
+    let finalDate = d[2] + "-" + (d[1].length == 1 ? ("0" + d[1]) : d[1]) + "-" + (d[0].length == 1 ? ("0" + d[0]) : d[0]) + " " + (this.date.value as Date).toLocaleTimeString();
 
     let evento = {
       creador: 1,
       "titulo": this.f.nombre.value,
       "descripcion": this.f.descripcion.value,
       "etiquetas": "#etiquetaDePrueba",
-      "fechaHora": this.date.value,
+      "fechaHora": finalDate,
       "duracion": "4 horas",
       "cupo": 10,
       "ubicacion": this.f.ubicacion.value,
     } as Evento;
 
+    console.log(evento)
+    this.posted = true;
     this.apiService.post(ApiService.createEventUrl, evento).subscribe(data => {
       debugger;
       if (data.error) {
         this.infoMsg = data.error + "";
         this.errorMsg = true;
       } else {
-        this.infoMsg = "El evento '" + evento.titulo + "' ha sido creado con éxito";
+        this.infoMsg = ("El evento '" + evento.titulo + "' ha sido creado con éxito").toString();
+        this.errorMsg = false;
       }
     }, error => {
       this.infoMsg = error;
