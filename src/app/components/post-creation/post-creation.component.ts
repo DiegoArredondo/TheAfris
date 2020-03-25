@@ -49,7 +49,7 @@ export class PostCreationComponent implements OnInit {
 
   onSubmit(){
     this.infoMsg = "";
-    this.errorMsg = true;
+    this.errorMsg = false;
     this.submitted = true;
 
     // Se detiene aquí si el formulario es inválido 
@@ -74,6 +74,7 @@ export class PostCreationComponent implements OnInit {
         this.errorMsg = true;
       } else {
         this.infoMsg = "La publicación '" + publicacion.titulo + "' ha sido creada con éxito";
+        this.errorMsg = false;
       }
     }, error => {
       this.infoMsg = error;

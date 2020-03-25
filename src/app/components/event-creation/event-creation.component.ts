@@ -74,7 +74,7 @@ export class EventCreationComponent implements OnInit {
 
   onSubmit() {
     this.infoMsg = "";
-    this.errorMsg = true;
+    this.errorMsg = false;
     this.submitted = true;
 
     // Se detiene aquí si el formulario es inválido 
