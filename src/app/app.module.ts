@@ -13,6 +13,8 @@ import { HeaderComponent } from './components/utils/header/header.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { RegisterComponent } from './components/user/register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ListaPublicacionesComponent } from './components/lista-publicaciones/lista-publicaciones.component';
+import {ListaEventosComponent} from './components/lista-eventos/lista-eventos.component';
 
 
 import {MatNativeDateModule} from '@angular/material/core';
@@ -21,6 +23,7 @@ import { MaterialModule } from './material.module';
 
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +35,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     HeaderComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ListaPublicacionesComponent,
+    ListaEventosComponent
   ],
   imports: [
     BrowserModule,

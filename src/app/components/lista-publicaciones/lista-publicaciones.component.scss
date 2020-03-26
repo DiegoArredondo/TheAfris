@@ -1,0 +1,78 @@
+div.listaPublicaciones {
+  width: 68vw;
+  div.encabezado {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    svg {
+      width: 2vw;
+      max-height: 2vw;
+    }
+  }
+
+  div.editorPublicacion {
+    display: flex;
+    flex-direction: row;
+
+    div.imagenPublicacion {
+      flex-direction: column;
+      border: 3px solid grey;
+      border-radius: 25px;
+      justify-content: center;
+      align-items: center;
+      width: 18em;
+      height: 9em;
+      img#imagen {
+       
+       max-width: 100%;
+       max-height: 100%;
+      }
+    }
+    div.detallePublicacion {
+      margin-left: 1.5em;
+      flex-direction: column;
+      justify-content: stretch;
+    }
+    div.botonesEditarPublicacion {
+      margin-left: 1em;
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      button#btnEditar {
+        background-image: url("/assets/pencil.svg");
+        margin-bottom:.5em;
+      }
+
+      button#btnEliminar {
+        background-image: url("/assets/trash.svg");
+      }
+    }
+  }
+}
+
+div.svg-container {
+  width: 2.5em !important;
+  height: 2.5em !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  svg {
+    max-width: 1.5em;
+    max-height: 1.5em;
+  }
+}
+
+button {
+  width: 3.5em;
+  height: 3.5em;
+  background-size: cover
+}
+button:hover{
+  background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background-color:#378de5;
+  background-size: cover;
+}
+
