@@ -9,11 +9,11 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class ApiService {
 
   static createEventUrl = "postEvent"
-  static updateEventUrl = "postEvent"
-  static deleteEventUrl = "postEvent"
+  static updateEventUrl = "updateEvent"
+  static deleteEventUrl = "deleteEvent"
   static createPostUrl = "postPost"
-  static updatePostUrl = "postPost"
-  static deletePostUrl = "postPost"
+  static updatePostUrl = "updatePost"
+  static deletePostUrl = "deletePost"
 
 
   private baseUrl: string = " https://theafrisback.appspot.com/";

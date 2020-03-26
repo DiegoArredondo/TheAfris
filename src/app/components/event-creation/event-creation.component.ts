@@ -23,17 +23,6 @@ export class EventCreationComponent implements OnInit {
 
   posted: boolean = false;
 
-  eventoMockup = {
-    "titulo": "Titulo del evento",
-    "descripcion": "Descripcion de prueba",
-    "fechaHora": "2020-04-20 12:00:17",
-    "etiquetas": "#etiqueta1,#etiqueta2,#etiqueta3",
-    "duracion": "5 dias",
-    "creador": 1,
-    "cupo": 50,
-    "ubicacion": "Lugar del evento"
-  } as Evento;
-
 
   constructor(private formBuilder: FormBuilder, private apiService: ApiService) {
     // Preguntar si quieren tener hora predeterminada
@@ -45,9 +34,10 @@ export class EventCreationComponent implements OnInit {
       nombre: ['', Validators.required],
       fecha: ['', Validators.required],
       hora: ['', Validators.required],
-      ubicacion: ['',],
+      ubicacion: ['', Validators.required],
       descripcion: ['', Validators.required],
     });
+    
   }
 
   // Un getter conveniente para un fácil acceso a los datos de los campos del formulario
