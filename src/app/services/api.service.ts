@@ -16,6 +16,14 @@ export class ApiService {
   static deletePostUrl = "deletePost"
 
 
+  static getUserById = "getUser"
+  static getEventById = "getEvent"
+  static getPostById = "getPost"
+
+  static getAllEvents = "getAllEvents"
+  static getAllUsers = "getallUsers"
+  static getAllPosts = "getAllPosts"
+
   private baseUrl: string = " https://theafrisback.appspot.com/";
 
   constructor(private httpClient: HttpClient) { }

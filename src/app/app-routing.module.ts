@@ -10,10 +10,10 @@ import {ListaEventosComponent} from './components/lista-eventos/lista-eventos.co
 const routes: Routes = [
   {path:"crearEvento", component: EventCreationComponent} as Route,
   {path:"editarEvento", component: EventEditComponent} as Route,
+  {path:"listaEventos", component: ListaEventosComponent} as Route,
   {path:"crearPublicacion", component: PostCreationComponent} as Route,
   {path:"editarPublicacion", component: PostEditComponent} as Route,
   {path:"listaPublicaciones", component: ListaPublicacionesComponent} as Route,
-  {path:"listaEventos", component: ListaEventosComponent} as Route,
 ];
 
 @NgModule({

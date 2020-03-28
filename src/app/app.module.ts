@@ -10,6 +10,7 @@ import { PostCreationComponent } from './components/post-creation/post-creation.
 import { PostEditComponent } from './components/post-edit/post-edit.component';
 import { FooterComponent } from './components/utils/footer/footer.component';
 import { HeaderComponent } from './components/utils/header/header.component';
+import { ConfirmModalComponent } from './components/utils/confirmModal/confirm-modal.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { RegisterComponent } from './components/user/register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -37,7 +38,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     RegisterComponent,
     ListaPublicacionesComponent,
-    ListaEventosComponent
+    ListaEventosComponent,
+    ConfirmModalComponent
   ],
   imports: [
     BrowserModule,

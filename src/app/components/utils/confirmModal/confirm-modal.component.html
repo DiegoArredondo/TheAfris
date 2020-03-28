@@ -1,0 +1,14 @@
+<div class="wrapper">
+    <div class="modal border-blue">
+        <div class="close-btn">
+            <button class="border-blue btn-close">✖</button>
+        </div>
+        <div class="message">
+            {{message}}
+        </div>
+        <div class="buttons">
+            <button class="btn reverse cancel" (click)="emitResponse(false)">Cancelar</button>
+            <button class="btn confirm" (click)="emitResponse(true)">Confirmar</button>
+        </div>
+    </div>
+</div>

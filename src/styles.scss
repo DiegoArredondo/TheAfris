@@ -70,6 +70,10 @@ body {
 .color-blue {
   color: $blue;
 }
+.border-blue {
+  border: 1.5px solid $blue;
+  border-radius: 20px;
+}
 .bg-gray {
   background: $gray;
 }
@@ -120,9 +124,10 @@ div.outlet{
     background-image: url("assets/dibujo.svg");
     background-repeat: no-repeat;
     background-position: right;
-    background-position-y: 23vh;
+    background-position-y: calc(100vh - 60vh);
     background-position-x: 68vw;
     background-size: 70vh;
+    background-attachment: fixed;
 }
 router-outlet {
   z-index: 10;

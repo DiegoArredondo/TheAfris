@@ -5,6 +5,7 @@ import { MatDatepicker } from '@angular/material/datepicker';
 import { NgxMaterialTimepickerComponent } from 'ngx-material-timepicker';
 import { Evento } from 'src/app/entities/evento';
 import * as moment from 'moment';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-event-edit',
@@ -27,12 +28,42 @@ export class EventEditComponent implements OnInit {
 
   evento:Evento;
 
-  constructor(private formBuilder: FormBuilder, private apiService: ApiService) {
+  constructor(private formBuilder: FormBuilder, private apiService: ApiService, private router: Router, private route: ActivatedRoute) {
     // Preguntar si quieren tener hora predeterminada
     this.time = "4:00 pm"
   }
 
   ngOnInit(): void {
+
+    this.route.paramMap.subscribe(params => {
+      if(params.get('id')){
+        this.apiService.post(ApiService.getEventById, {"id":params.get('id')}).subscribe(data=>{
+          debugger
+          if(data){
+            this.evento = data as Evento;
+        
+            this.f.titulo.setValue(this.evento.titulo)
+            this.f.descripcion.setValue(this.evento.descripcion)
+            this.f.fecha.setValue(moment(this.evento.fechaHora).format("DD/mm/YYYY"))
+            let usableDate = new Date(this.evento.fechaHora);
+            this.time = usableDate.getHours() + ":" + usableDate.getMinutes()
+            this.f.hora.setValue(usableDate.getHours() + ":" + usableDate.getMinutes())
+            //this.f.etiquetas = evento.etiquetas
+            //this.f.duracion = evento.duracion
+            //this.f.cupo = evento.cupo
+            this.f.ubicacion.setValue(this.evento.ubicacion)
+          }
+        }, error =>{
+          this.infoMsg = error;
+          this.errorMsg = true;
+          return
+        })
+      } else {
+        this.router.navigate(["listaEventos"]);
+        return;
+      }
+    });
+
     this.editEventForm = this.formBuilder.group({
       titulo: ['', Validators.required],
       fecha: ['', Validators.required],
@@ -40,29 +71,6 @@ export class EventEditComponent implements OnInit {
       ubicacion: ['', Validators.required],
       descripcion: ['', Validators.required],
     });
-
-    this.evento = {
-    "id" : 1,
-    "titulo" : "Titulo del evento",
-    "descripcion" : "Descripcion de prueba",
-    "fechaHora" : "2020-04-20 12:06:17",
-    "etiquetas" : "#etiqueta1,#etiqueta2,#etiqueta3",
-    "duracion" : "5 dias",
-    "creador" : 1,
-    "cupo" : 50,
-    "ubicacion" : "Lugar del evento"
-    }
-
-    this.f.titulo.setValue(this.evento.titulo)
-    this.f.descripcion.setValue(this.evento.descripcion)
-    this.f.fecha.setValue(moment(this.evento.fechaHora).format("DD/mm/YYYY"))
-    let usableDate = new Date(this.evento.fechaHora);
-    this.time = usableDate.getHours() + ":" + usableDate.getMinutes()
-    this.f.hora.setValue(usableDate.getHours() + ":" + usableDate.getMinutes())
-    //this.f.etiquetas = evento.etiquetas
-    //this.f.duracion = evento.duracion
-    //this.f.cupo = evento.cupo
-    this.f.ubicacion.setValue(this.evento.ubicacion)
     
   }
 
@@ -91,14 +99,22 @@ export class EventEditComponent implements OnInit {
     this.infoMsg = "";
     this.errorMsg = false;
     this.submitted = true;
+    
 
     // Se detiene aquí si el formulario es inválido 
-    if (this.editEventForm.invalid || this.posted) {
+    if (
+      !this.f.titulo.value
+      || !this.f.descripcion.value
+      || !this.f.fecha.value
+      || !this.f.hora.value
+      || !this.f.ubicacion.value
+      || this.posted) {
       this.posted = false;
       return;
     }
 
-    let finalDate = moment(this.f.fecha.value as Date).format("DD-mm-YYYY") + " " + (this.date.value as Date).toLocaleTimeString();
+    let preparedDate = (this.f.fecha.value + "").indexOf("/") == -1 ? moment(new Date(this.f.fecha.value)).format("mm-DD-YYYY") : this.f.fecha.value.replace("/","-").replace("/","-")
+    let finalDate = preparedDate  + " " + (this.date.value as Date).toLocaleTimeString();
 
     this.evento.titulo = this.f.titulo.value;
     this.evento.descripcion = this.f.titulo.value;
@@ -114,7 +130,7 @@ export class EventEditComponent implements OnInit {
         this.infoMsg = data.error + "";
         this.errorMsg = true;
       } else {
-        this.infoMsg = ("El evento '" + this.evento.titulo + "' ha sido creado con éxito").toString();
+        this.infoMsg = ("El evento '" + this.evento.titulo + "' ha sido actualizado con éxito").toString();
         this.errorMsg = false;
       }
     }, error => {

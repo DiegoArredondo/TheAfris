@@ -108,7 +108,7 @@
             <button type="submit" class="btn" (click)="onSubmit()">Actualizar</button>
         </div>
 
-        <div class="class color-red full-container" *ngIf="submitted && editEventForm.invalid">
+        <div class="class color-red full-container" *ngIf="submitted && errorMsg">
             *Los campos remarcados con rojo son requeridos para continuar
         </div>
 

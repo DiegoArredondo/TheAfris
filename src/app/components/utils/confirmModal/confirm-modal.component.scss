@@ -1,0 +1,50 @@
+div.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.6);
+  width: 100vw;
+  height: 100vh;
+
+  div.modal {
+    width: 40vw;
+    height: 30vh;
+    padding: 2.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+
+    div.close-btn{
+      display: flex;
+      justify-content: flex-end;
+
+      button.btn-close {
+        width: 3rem;
+        height: 3rem;
+        background: none;
+        font-weight: bold;
+      }
+    }
+
+    div.message {
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+    div.buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      button {
+        margin: 2em 1.5em;
+        padding: 1em 2em;
+      }
+    }
+  }
+}
