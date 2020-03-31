@@ -4,11 +4,11 @@ import { ApiService } from 'src/app/services/api.service';
 import { Publicacion } from 'src/app/entities/publicacion';
 
 @Component({
-  selector: 'app-post-creation',
-  templateUrl: './post-creation.component.html',
-  styleUrls: ['./post-creation.component.scss']
+  selector: 'app-post-edit',
+  templateUrl: './post-edit.component.html',
+  styleUrls: ['./post-edit.component.scss']
 })
-export class PostCreationComponent implements OnInit {
+export class PostEditComponent implements OnInit {
 
   infoMsg: string;
   errorMsg: boolean = false;
