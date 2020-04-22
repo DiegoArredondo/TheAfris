@@ -6,6 +6,7 @@ import { PostCreationComponent } from './components/post-creation/post-creation.
 import { PostEditComponent } from './components/post-edit/post-edit.component';
 import { ListaPublicacionesComponent } from './components/lista-publicaciones/lista-publicaciones.component';
 import {ListaEventosComponent} from './components/lista-eventos/lista-eventos.component';
+import {LogInComponent} from './components/log-in/log-in.component';
 
 const routes: Routes = [
   {path:"crearEvento", component: EventCreationComponent} as Route,
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:"crearPublicacion", component: PostCreationComponent} as Route,
   {path:"editarPublicacion", component: PostEditComponent} as Route,
   {path:"listaPublicaciones", component: ListaPublicacionesComponent} as Route,
+  {path:"iniciarSesion", component: LogInComponent} as Route,
 ];
 
 @NgModule({

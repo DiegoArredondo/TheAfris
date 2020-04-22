@@ -1,0 +1,45 @@
+div.login {
+    width: 30vw;
+    
+    div.full-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0.75rem 0;
+        width: 15%;
+      }
+    
+      div.half-container {
+        width: 47.5%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      input {
+        height: 2.5em !important;
+        flex-grow: 1;
+        width: calc(100% - 2em);
+      }
+
+      div.iniciarsesion {
+        justify-content: flex-end !important;
+        button {
+            margin-top: 30px;
+            margin-bottom: 50px;
+            width: 12.5em;
+            height: 2.5em;
+            float: right;
+        }
+      }
+
+  }
+
+    svg {
+        width: 2vw;
+        max-height: 2vw;
+      }
+
+  
+    

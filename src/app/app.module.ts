@@ -24,6 +24,7 @@ import { MaterialModule } from './material.module';
 
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LogInComponent } from './components/log-in/log-in.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RegisterComponent,
     ListaPublicacionesComponent,
     ListaEventosComponent,
-    ConfirmModalComponent
+    ConfirmModalComponent,
+    LogInComponent
   ],
   imports: [
     BrowserModule,
