@@ -1,0 +1,62 @@
+div.registrarUsuario {
+    width: 50vw;
+    
+    div.full-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+    
+      div.half-container {
+        width: 50%;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      input {
+        height: 2.5em !important;
+        flex-grow: 1;
+        margin-left: 5px;
+        width: calc(100% - 2em);
+      }
+
+      div.registrar {
+        justify-content: center !important;
+        button {
+            margin-top: 30px;
+            margin-bottom: 50px;
+            width: 12.5em;
+            height: 2.5em;
+            margin-left: 25%;
+        }
+      }
+
+    div.notification {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        label {
+            font-size: 15px;
+            font-weight: bold;
+        }
+        input[type=checkbox] {
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    div.notas {
+        p {
+            color: grey;
+            font-size: 13px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+    }
+  }
+
+    svg {
+        width: 2vw;
+        max-height: 2vw;
+      }
+
