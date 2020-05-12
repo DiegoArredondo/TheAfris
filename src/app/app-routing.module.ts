@@ -5,9 +5,10 @@ import { EventEditComponent } from './components/event-edit/event-edit.component
 import { PostCreationComponent } from './components/post-creation/post-creation.component';
 import { PostEditComponent } from './components/post-edit/post-edit.component';
 import { ListaPublicacionesComponent } from './components/lista-publicaciones/lista-publicaciones.component';
-import {ListaEventosComponent} from './components/lista-eventos/lista-eventos.component';
-import {LogInComponent} from './components/log-in/log-in.component';
-import {RegistrarUsuarioComponent} from './components/registrar-usuario/registrar-usuario.component'
+import { ListaEventosComponent } from './components/lista-eventos/lista-eventos.component';
+import { LogInComponent } from './components/log-in/log-in.component';
+import { RegistrarUsuarioComponent } from './components/registrar-usuario/registrar-usuario.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   {path:"crearEvento", component: EventCreationComponent} as Route,
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:"listaPublicaciones", component: ListaPublicacionesComponent} as Route,
   {path:"iniciarSesion", component: LogInComponent} as Route,
   {path:"registrarUsuario", component: RegistrarUsuarioComponent} as Route,
+  {path:"home", component: HomeComponent} as Route,
 ];
 
 @NgModule({
