@@ -20,6 +20,7 @@ const routes: Routes = [
   {path:"iniciarSesion", component: LogInComponent} as Route,
   {path:"registrarUsuario", component: RegistrarUsuarioComponent} as Route,
   {path:"home", component: HomeComponent} as Route,
+  {path:"", component: HomeComponent} as Route,
 ];
 
 @NgModule({

@@ -24,7 +24,9 @@ export class ApiService {
   static getAllUsers = "getallUsers"
   static getAllPosts = "getAllPosts"
 
-  private baseUrl: string = " https://theafrisback.appspot.com/";
+  static getFeed = "getFeed"
+
+  private baseUrl: string = "https://theafrisback.appspot.com/";
 
   constructor(private httpClient: HttpClient) { }
 

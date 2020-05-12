@@ -13,6 +13,15 @@ div.registrarUsuario {
         align-items: center;
       }
 
+      div.svg-icon{
+        width: 3vw;
+
+        svg{
+          width: 2vw;
+          max-height: 2vw;
+          fill: #A7A7A7;
+        }
+      }
       input {
         height: 2.5em !important;
         flex-grow: 1;
