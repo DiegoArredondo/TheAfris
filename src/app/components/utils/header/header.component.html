@@ -28,10 +28,22 @@
             <a class="menu-font" (click)="goTo('eventos')">Eventos</a>
             <a class="menu-font" href="">Foro</a>
         </div>
-        <div class="user menu-font">
-            {{'Nombre usuario'}}
-            <img src="https://via.placeholder.com/50x50" alt="">
-            
-        </div>
+
+        
+            <div class="user menu-font dropbtn">
+                
+             
+
+                <div class="dropdown">
+                    {{'Nombre usuario'}}
+                    <img src="https://via.placeholder.com/50x50" alt="">
+                    <div class="dropdown-content">
+                     <a href="http://localhost:4200/crearEvento">Crear evento</a>
+                     <a href="http://localhost:4200/editarEvento">Editar evento</a>
+                     <a href="http://localhost:4200/crearPublicacion">Crear publicación</a>
+                     <a href="http://localhost:4200/editarPublicacion">Editar publicación</a>
+                    </div>
+                </div>
+            </div>
     </div>
 </div>
