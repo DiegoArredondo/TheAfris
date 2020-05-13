@@ -1,0 +1,121 @@
+div.listaEventos {
+    width: 70vw;
+    div.encabezado {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+  
+      svg {
+        width: 2vw;
+        max-height: 2vw;
+      }
+    }
+  
+    div.editorEventos {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 2.5vh;
+      width: 50vw;
+  
+      div.borde {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border: 3px solid grey;
+        border-radius: 25px;
+        width: 95%;
+        min-height: 8em;
+        height: fit-content;
+      }
+      div.imagenEvento {
+        flex-direction: column;
+        border-right: 3px solid grey;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        img#imagen {
+          max-width: 80%;
+          max-height: 80%;
+        }
+      }
+      div.detalleEvento {
+        margin-left: 1.5em;
+        flex-direction: column;
+        justify-content: stretch;
+        width: 75%;
+  
+        h3 {
+          margin: 0;
+          margin-top: 0.5em;
+        }
+        p {
+          margin: 0;
+          margin-top: 0.5em;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 95%;
+        }
+        div.datosEvento {
+          flex-direction: row;
+          margin-top: 0.5em;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+  
+          p {
+            font-weight: bold;
+            margin-left: 0.5em;
+            font-size: 0.85em;
+            margin-right: 1em;
+            margin-top: 0;
+          }
+          svg {
+            width: 1vw;
+            max-height: 1vw;
+            margin: 0;
+          }
+        }
+      }
+      div.botonesEditarEvento {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 1em;
+        button#btnEditar {
+          background-image: url("/assets/pencil.svg");
+          margin-bottom: 0.5em;
+        }
+  
+        button#btnEliminar {
+          background-image: url("/assets/trash.svg");
+        }
+      }
+    }
+  }
+  
+  div.svg-container {
+    width: 2.5em !important;
+    height: 2.5em !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    svg {
+      max-width: 1.5em;
+      max-height: 1.5em;
+    }
+  }
+  
+  button {
+    width: 3.5em;
+    height: 3.5em;
+    background-size: cover;
+  }
+  
+  button:hover {
+    background: linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+    background-color: #378de5;
+    background-size: cover;
+  }
+  

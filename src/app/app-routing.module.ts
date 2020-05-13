@@ -9,6 +9,8 @@ import { ListaEventosComponent } from './components/lista-eventos/lista-eventos.
 import { LogInComponent } from './components/log-in/log-in.component';
 import { RegistrarUsuarioComponent } from './components/registrar-usuario/registrar-usuario.component';
 import { HomeComponent } from './components/home/home.component';
+import {AllPostsComponent} from './components/all-posts/all-posts.component'
+import {AllEventsComponent} from './components/all-events/all-events.component'
 
 const routes: Routes = [
   {path:"crearEvento", component: EventCreationComponent} as Route,
@@ -21,6 +23,8 @@ const routes: Routes = [
   {path:"registrarUsuario", component: RegistrarUsuarioComponent} as Route,
   {path:"home", component: HomeComponent} as Route,
   {path:"", component: HomeComponent} as Route,
+  {path:"publicaciones", component: AllPostsComponent} as Route,
+  {path:"eventos", component:AllEventsComponent} as Route
 ];
 
 @NgModule({

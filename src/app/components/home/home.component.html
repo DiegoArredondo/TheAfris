@@ -1,5 +1,12 @@
-<div class="listaPublicaciones">
+<div class="encabezado">
+    <h3 class="color-gray">Forma parte de AFRIS</h3>
+    <div class="register">
+        <input placeholder="Introduce tu correo">
+    <button class="btn" (click)="goTo('registrarUsuario')">Registrarse</button>
+    </div>
 
+</div>
+<div class="listaPublicaciones">
     <div class="feedP1">
         <div class="feedGrande">
             <div class="fullFeed">
@@ -26,18 +33,34 @@
     <div class="fulldivider"></div>
 
     <div class="feedP2">
-        <div class="publicacion" *ngFor="let pub of feed; let i = index">
-            <div class="full" *ngIf="i >= 5">
+        <div class="publicacion">
+            <div class="full" >
                 <div class="imagenPublicacion">
                     <img id="imagen">
                 </div>
                 <div class="detallePublicacion">
-                    <h3 class="color-gray"> Nombre Publicación </h3>
-                    <p class="color-gray">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at accumsan
-                        elit. In sit amet odio ultricies, laoreet enim et, cursus nunc. <p>
+                    <h3 class="color-gray"> {{feed[5].titulo}} </h3>
+                    <p class="color-gray">{{feed[5].titulo}} <p>
 
                 </div>
             </div>
+        </div>
+
+        <div class="publicacion">
+            <div class="full" >
+                <div class="imagenPublicacion">
+                    <img id="imagen">
+                </div>
+                <div class="detallePublicacion">
+                    <h3 class="color-gray"> {{feed[6].titulo}} </h3>
+                    <p class="color-gray">{{feed[6].titulo}} <p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="vermas">
+            <button class="btn" (click)="goTo('publicaciones')">Ver más</button>
         </div>
     </div>
 
@@ -58,26 +81,25 @@
                 <img id="imagen">
             </div>
             <div class="detalleEvento full-container">
-                <h3 class="color-gray"> Nombre Evento </h3>
+                <h3 class="color-gray"> {{eventos[0].titulo}}</h3>
                     <div class="datosEvento">
                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="250pt" height="250pt" viewBox="0 0 250 250" version="1.1">
                     <g id="surface24324815">
                         <path style=" stroke:none;fill-rule:nonzero;fill:rgb(20.392157%,59.607843%,85.882353%);fill-opacity:1;" d="M 60 0 C 54.53125 0 50 4.53125 50 10 L 50 20 L 20 20 C 17.382812 20 14.726562 20.957031 12.851562 22.851562 C 10.957031 24.726562 10 27.382812 10 30 L 10 230 C 10 232.617188 10.957031 235.273438 12.851562 237.167969 C 14.726562 239.042969 17.382812 240 20 240 L 230 240 C 232.617188 240 235.273438 239.042969 237.167969 237.167969 C 239.042969 235.273438 240 232.617188 240 230 L 240 30 C 240 27.382812 239.042969 24.726562 237.167969 22.851562 C 235.273438 20.957031 232.617188 20 230 20 L 200 20 L 200 10 C 200 4.53125 195.46875 0 190 0 L 180 0 C 174.53125 0 170 4.53125 170 10 L 170 20 L 80 20 L 80 10 C 80 4.53125 75.46875 0 70 0 Z M 60 10 L 70 10 L 70 40 L 60 40 Z M 180 10 L 190 10 L 190 40 L 180 40 Z M 20 30 L 50 30 L 50 40 C 50 45.46875 54.53125 50 60 50 L 70 50 C 75.46875 50 80 45.46875 80 40 L 80 30 L 170 30 L 170 40 C 170 45.46875 174.53125 50 180 50 L 190 50 C 195.46875 50 200 45.46875 200 40 L 200 30 L 230 30 L 230 65 L 20 65 Z M 20 75 L 230 75 L 230 230 L 20 230 Z M 50 95 L 50 210 L 200 210 L 200 95 Z M 60 105 L 85 105 L 85 130 L 60 130 Z M 95 105 L 120 105 L 120 130 L 95 130 Z M 130 105 L 155 105 L 155 130 L 130 130 Z M 165 105 L 190 105 L 190 130 L 165 130 Z M 60 140 L 85 140 L 85 165 L 60 165 Z M 95 140 L 120 140 L 120 165 L 95 165 Z M 130 140 L 155 140 L 155 165 L 130 165 Z M 165 140 L 190 140 L 190 165 L 165 165 Z M 60 175 L 85 175 L 85 200 L 60 200 Z M 95 175 L 120 175 L 120 200 L 95 200 Z M 130 175 L 155 175 L 155 200 L 130 200 Z M 165 175 L 190 175 L 190 200 L 165 200 Z M 165 175 "/>
                     </g>
-                    </svg> <p class="color-gray">Fecha Evento</p>
+                    </svg> <p class="color-gray">{{ getFecha(eventos[0].fechaHora) }}</p>
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="256pt" height="256pt" viewBox="0 0 256 256" version="1.1">
                         <g id="surface24965141">
                         <path style=" stroke:none;fill-rule:nonzero;fill:rgb(20.392157%,59.607843%,85.882353%);fill-opacity:1;" d="M 128 27 C 72.398438 27 27 72.398438 27 128 C 27 183.601562 72.398438 229 128 229 C 183.601562 229 229 183.601562 229 128 C 229 72.398438 183.601562 27 128 27 Z M 128 39 C 177 39 217 79 217 128 C 217 177 177 217 128 217 C 79 217 39 177 39 128 C 39 79 79 39 128 39 Z M 128 62 C 124.601562 62 122 64.601562 122 68 L 122 117.601562 C 118.398438 119.601562 116 123.601562 116 128 C 116 134.601562 121.398438 140 128 140 C 132.398438 140 136.398438 137.601562 138.398438 134 L 168 134 C 171.398438 134 174 131.398438 174 128 C 174 124.601562 171.398438 122 168 122 L 138.398438 122 C 137.398438 120.199219 135.800781 118.601562 134 117.601562 L 134 68 C 134 64.601562 131.398438 62 128 62 Z M 128 62 "/>
                         </g> </svg>
-                        <p class="color-gray">Hora Evento</p>
+                        <p class="color-gray">{{ getHora(eventos[0].fechaHora) }}</p>
                    </div>
                    <div class="datosEvento">
                        <svg xmlns="http://www.w3.org/2000/svg" height="512px" viewBox="0 0 512.00069 512" width="512px"><g><path d="m316 260c-5.519531 0-10 4.480469-10 10s4.480469 10 10 10 10-4.480469 10-10-4.480469-10-10-10zm0 0" data-original="#000000" class="active-path" data-old_color="#000000" fill="#3498DB"/><path d="m102.167969 369.785156-100 126c-2.386719 3.003906-2.839844 7.109375-1.171875 10.5625 1.667968 3.457032 5.167968 5.652344 9.003906 5.652344h492c3.835938 0 7.335938-2.195312 9.003906-5.652344 1.671875-3.453125 1.214844-7.558594-1.171875-10.5625l-100-126c-1.894531-2.390625-4.78125-3.785156-7.832031-3.785156h-87.597656l74.785156-117.296875c17.542969-26.300781 26.8125-56.972656 26.8125-88.703125 0-88.222656-71.773438-160-160-160s-160 71.777344-160 160c0 31.730469 9.269531 62.398438 26.8125 88.703125l74.785156 117.296875h-87.597656c-3.050781 0-5.933594 1.394531-7.832031 3.785156zm-37.335938 79.214844h60.464844l-34.125 43h-60.46875zm145.519531-63 27.414063 43h-71.0625l34.128906-43zm91.300782 0h9.519531l34.125 43h-71.058594zm59.519531 63 34.125 43h-278.59375l34.128906-43zm59.660156 43-34.128906-43h60.46875l34.125 43zm10.464844-63h-60.464844l-34.128906-43h60.46875zm-291.789063-191.3125c-15.378906-23.023438-23.507812-49.886719-23.507812-77.6875 0-77.195312 62.804688-140 140-140s140 62.804688 140 140c0 27.800781-8.128906 54.664062-23.503906 77.6875-.042969.058594-.078125.117188-.117188.175781-6.566406 10.300781-111.320312 174.605469-116.378906 182.535157-12.722656-19.957032-103.421875-162.214844-116.378906-182.535157-.035156-.058593-.074219-.117187-.113282-.175781zm35.789063 148.3125-34.125 43h-60.46875l34.128906-43zm0 0" data-original="#000000" class="active-path" data-old_color="#000000" fill="#3498DB"/><path d="m256 260c54.898438 0 100-44.457031 100-100 0-55.140625-44.859375-100-100-100s-100 44.859375-100 100c0 55.558594 45.117188 100 100 100zm0-180c44.113281 0 80 35.886719 80 80 0 44.523438-36.175781 80-80 80-43.835938 0-80-35.476562-80-80 0-44.113281 35.886719-80 80-80zm0 0" data-original="#000000" class="active-path" data-old_color="#000000" fill="#3498DB"/><path d="m298.121094 294.125c-4.726563-2.851562-10.875-1.328125-13.726563 3.402344l-36.960937 61.320312c-2.851563 4.730469-1.328125 10.875 3.402344 13.726563 4.75 2.863281 10.886718 1.308593 13.726562-3.402344l36.960938-61.320313c2.851562-4.730468 1.328124-10.875-3.402344-13.726562zm0 0" data-original="#000000" class="active-path" data-old_color="#000000" fill="#3498DB"/></g> </svg>
-                        <p class="color-gray">Ubicación Evento</p>
+                        <p class="color-gray">{{eventos[0].ubicacion}}</p>
                    </div>
-                <p class="color-gray" id="descripcionEvento">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at accumsan
-                    elit. In sit amet odio ultricies, laoreet enim et, cursus nunc. <p> 
-                        <a href="http://localhost:4200/home">Read more...</a>        
+                <p class="color-gray" id="descripcionEvento">{{eventos[0].descripcion}}<p> 
+                        <a href="http://localhost:4200/eventos">Read more...</a>        
             </div>
         </div>
 
@@ -90,34 +112,34 @@
                 <img id="imagen">
             </div>
             <div class="detalleEvento full-container">
-                <h3 class="color-gray"> Nombre Evento </h3>
+                <h3 class="color-gray"> {{eventos[1].titulo}}</h3>
                     <div class="datosEvento">
                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="250pt" height="250pt" viewBox="0 0 250 250" version="1.1">
                     <g id="surface24324815">
                         <path style=" stroke:none;fill-rule:nonzero;fill:rgb(20.392157%,59.607843%,85.882353%);fill-opacity:1;" d="M 60 0 C 54.53125 0 50 4.53125 50 10 L 50 20 L 20 20 C 17.382812 20 14.726562 20.957031 12.851562 22.851562 C 10.957031 24.726562 10 27.382812 10 30 L 10 230 C 10 232.617188 10.957031 235.273438 12.851562 237.167969 C 14.726562 239.042969 17.382812 240 20 240 L 230 240 C 232.617188 240 235.273438 239.042969 237.167969 237.167969 C 239.042969 235.273438 240 232.617188 240 230 L 240 30 C 240 27.382812 239.042969 24.726562 237.167969 22.851562 C 235.273438 20.957031 232.617188 20 230 20 L 200 20 L 200 10 C 200 4.53125 195.46875 0 190 0 L 180 0 C 174.53125 0 170 4.53125 170 10 L 170 20 L 80 20 L 80 10 C 80 4.53125 75.46875 0 70 0 Z M 60 10 L 70 10 L 70 40 L 60 40 Z M 180 10 L 190 10 L 190 40 L 180 40 Z M 20 30 L 50 30 L 50 40 C 50 45.46875 54.53125 50 60 50 L 70 50 C 75.46875 50 80 45.46875 80 40 L 80 30 L 170 30 L 170 40 C 170 45.46875 174.53125 50 180 50 L 190 50 C 195.46875 50 200 45.46875 200 40 L 200 30 L 230 30 L 230 65 L 20 65 Z M 20 75 L 230 75 L 230 230 L 20 230 Z M 50 95 L 50 210 L 200 210 L 200 95 Z M 60 105 L 85 105 L 85 130 L 60 130 Z M 95 105 L 120 105 L 120 130 L 95 130 Z M 130 105 L 155 105 L 155 130 L 130 130 Z M 165 105 L 190 105 L 190 130 L 165 130 Z M 60 140 L 85 140 L 85 165 L 60 165 Z M 95 140 L 120 140 L 120 165 L 95 165 Z M 130 140 L 155 140 L 155 165 L 130 165 Z M 165 140 L 190 140 L 190 165 L 165 165 Z M 60 175 L 85 175 L 85 200 L 60 200 Z M 95 175 L 120 175 L 120 200 L 95 200 Z M 130 175 L 155 175 L 155 200 L 130 200 Z M 165 175 L 190 175 L 190 200 L 165 200 Z M 165 175 "/>
                     </g>
-                    </svg> <p class="color-gray">Fecha Evento</p>
+                    </svg> <p class="color-gray">{{ getFecha(eventos[1].fechaHora) }}</p>
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="256pt" height="256pt" viewBox="0 0 256 256" version="1.1">
                         <g id="surface24965141">
                         <path style=" stroke:none;fill-rule:nonzero;fill:rgb(20.392157%,59.607843%,85.882353%);fill-opacity:1;" d="M 128 27 C 72.398438 27 27 72.398438 27 128 C 27 183.601562 72.398438 229 128 229 C 183.601562 229 229 183.601562 229 128 C 229 72.398438 183.601562 27 128 27 Z M 128 39 C 177 39 217 79 217 128 C 217 177 177 217 128 217 C 79 217 39 177 39 128 C 39 79 79 39 128 39 Z M 128 62 C 124.601562 62 122 64.601562 122 68 L 122 117.601562 C 118.398438 119.601562 116 123.601562 116 128 C 116 134.601562 121.398438 140 128 140 C 132.398438 140 136.398438 137.601562 138.398438 134 L 168 134 C 171.398438 134 174 131.398438 174 128 C 174 124.601562 171.398438 122 168 122 L 138.398438 122 C 137.398438 120.199219 135.800781 118.601562 134 117.601562 L 134 68 C 134 64.601562 131.398438 62 128 62 Z M 128 62 "/>
                         </g> </svg>
-                        <p class="color-gray">Hora Evento</p>
+                        <p class="color-gray">{{ getHora(eventos[1].fechaHora) }}</p>
                    </div>
                    <div class="datosEvento">
                        <svg xmlns="http://www.w3.org/2000/svg" height="512px" viewBox="0 0 512.00069 512" width="512px"><g><path d="m316 260c-5.519531 0-10 4.480469-10 10s4.480469 10 10 10 10-4.480469 10-10-4.480469-10-10-10zm0 0" data-original="#000000" class="active-path" data-old_color="#000000" fill="#3498DB"/><path d="m102.167969 369.785156-100 126c-2.386719 3.003906-2.839844 7.109375-1.171875 10.5625 1.667968 3.457032 5.167968 5.652344 9.003906 5.652344h492c3.835938 0 7.335938-2.195312 9.003906-5.652344 1.671875-3.453125 1.214844-7.558594-1.171875-10.5625l-100-126c-1.894531-2.390625-4.78125-3.785156-7.832031-3.785156h-87.597656l74.785156-117.296875c17.542969-26.300781 26.8125-56.972656 26.8125-88.703125 0-88.222656-71.773438-160-160-160s-160 71.777344-160 160c0 31.730469 9.269531 62.398438 26.8125 88.703125l74.785156 117.296875h-87.597656c-3.050781 0-5.933594 1.394531-7.832031 3.785156zm-37.335938 79.214844h60.464844l-34.125 43h-60.46875zm145.519531-63 27.414063 43h-71.0625l34.128906-43zm91.300782 0h9.519531l34.125 43h-71.058594zm59.519531 63 34.125 43h-278.59375l34.128906-43zm59.660156 43-34.128906-43h60.46875l34.125 43zm10.464844-63h-60.464844l-34.128906-43h60.46875zm-291.789063-191.3125c-15.378906-23.023438-23.507812-49.886719-23.507812-77.6875 0-77.195312 62.804688-140 140-140s140 62.804688 140 140c0 27.800781-8.128906 54.664062-23.503906 77.6875-.042969.058594-.078125.117188-.117188.175781-6.566406 10.300781-111.320312 174.605469-116.378906 182.535157-12.722656-19.957032-103.421875-162.214844-116.378906-182.535157-.035156-.058593-.074219-.117187-.113282-.175781zm35.789063 148.3125-34.125 43h-60.46875l34.128906-43zm0 0" data-original="#000000" class="active-path" data-old_color="#000000" fill="#3498DB"/><path d="m256 260c54.898438 0 100-44.457031 100-100 0-55.140625-44.859375-100-100-100s-100 44.859375-100 100c0 55.558594 45.117188 100 100 100zm0-180c44.113281 0 80 35.886719 80 80 0 44.523438-36.175781 80-80 80-43.835938 0-80-35.476562-80-80 0-44.113281 35.886719-80 80-80zm0 0" data-original="#000000" class="active-path" data-old_color="#000000" fill="#3498DB"/><path d="m298.121094 294.125c-4.726563-2.851562-10.875-1.328125-13.726563 3.402344l-36.960937 61.320312c-2.851563 4.730469-1.328125 10.875 3.402344 13.726563 4.75 2.863281 10.886718 1.308593 13.726562-3.402344l36.960938-61.320313c2.851562-4.730468 1.328124-10.875-3.402344-13.726562zm0 0" data-original="#000000" class="active-path" data-old_color="#000000" fill="#3498DB"/></g> </svg>
-                        <p class="color-gray">Ubicación Evento</p>
+                        <p class="color-gray">{{eventos[1].ubicacion}}</p>
                    </div>
-                <p class="color-gray" id="descripcionEvento">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at accumsan
-                    elit. In sit amet odio ultricies, laoreet enim et, cursus nunc. <p>
-                        <a href="http://localhost:4200/home">Read more...</a>
+                <p class="color-gray" id="descripcionEvento">{{eventos[1].descripcion}}<p> 
+                        <a href="http://localhost:4200/eventos">Read more...</a>        
             </div>
         </div>
 
     </div>
 
 
+    
     <div class="vermas">
-        <button type="submit" class="btn"><b>Ver más</b></button>
+        <button class="btn" (click)="goTo('eventos')">Ver más</button>
     </div>
 
 </div>

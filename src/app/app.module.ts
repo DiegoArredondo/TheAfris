@@ -27,6 +27,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogInComponent } from './components/log-in/log-in.component';
 import { RegistrarUsuarioComponent } from './components/registrar-usuario/registrar-usuario.component';
 import { HomeComponent } from './components/home/home.component';
+import { AllPostsComponent } from './components/all-posts/all-posts.component';
+import { AllEventsComponent } from './components/all-events/all-events.component';
 
 
 @NgModule({
@@ -46,6 +48,8 @@ import { HomeComponent } from './components/home/home.component';
     LogInComponent,
     RegistrarUsuarioComponent,
     HomeComponent,
+    AllPostsComponent,
+    AllEventsComponent,
   ],
   imports: [
     BrowserModule,
