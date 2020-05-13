@@ -12,7 +12,7 @@
             <div class="imagenEvento full-container">
                 <img id="imagen">
             </div>
-            <div class="detalleEvento full-container">
+            <div class="detalleEvento full-container" (click)="consultarEvento(eventos[i])" >
                 <h3 class="color-gray"> {{ item.titulo }} </h3>
                 <div class="datosEvento">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="250pt"

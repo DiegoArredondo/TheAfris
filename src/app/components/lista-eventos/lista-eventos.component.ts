@@ -24,7 +24,7 @@ export class ListaEventosComponent implements OnInit {
   ngOnInit(): void {
 
     this.apiService.get(ApiService.getAllEvents).subscribe(data=>{
-      this.eventos = data;
+      this.eventos = data.reverse();
     })
 
   }

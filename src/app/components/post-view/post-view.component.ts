@@ -6,11 +6,12 @@ import { Publicacion } from 'src/app/entities/publicacion';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-post-edit',
-  templateUrl: './post-edit.component.html',
-  styleUrls: ['./post-edit.component.scss']
+  selector: 'app-post-view',
+  templateUrl: './post-view.component.html',
+  styleUrls: ['./post-view.component.scss']
 })
-export class PostEditComponent implements OnInit {
+export class PostViewComponent implements OnInit {
+
   infoMsg: string;
   errorMsg: boolean = false;
 
@@ -18,6 +19,9 @@ export class PostEditComponent implements OnInit {
   submitted = false;
  
   publicacion:Publicacion;
+
+ 
+
   posted: boolean = false;
 
 
@@ -54,39 +58,5 @@ export class PostEditComponent implements OnInit {
     });
   }
   get f() { return this.createPostForm.controls; }
-  onSubmit(){
-    this.infoMsg = "";
-    this.errorMsg = false;
-    this.submitted = true;
 
-    // Se detiene aquí si el formulario es inválido 
-    if (this.createPostForm.invalid || this.posted) {
-      this.posted = false;
-      return;
-    }
-
-
-    let publicacion = {
-      creador: 1,
-      "titulo": this.f.titulo.value,
-      "contenido": this.f.contenido.value,
-      "etiquetas": "#etiquetaDePrueba",
-      "seccion": 1
-    } as Publicacion;
-
-    this.posted = true;
-    this.apiService.post(ApiService.createPostUrl, publicacion).subscribe(data => {
-      debugger;
-      if (data.error) {
-        this.infoMsg = data.error + "";
-        this.errorMsg = true;
-      } else {
-        this.infoMsg = "La publicación '" + publicacion.titulo + "' ha sido creada con éxito";
-        this.errorMsg = false;
-      }
-    }, error => {
-      this.infoMsg = error;
-      this.errorMsg = true;
-    })
-  }
 }

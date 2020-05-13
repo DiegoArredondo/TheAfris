@@ -3,7 +3,7 @@ import { ApiService } from 'src/app/services/api.service';
 import { Evento } from 'src/app/entities/evento';
 import * as moment from 'moment';
 import { Router } from '@angular/router';
-
+import { Publicacion } from 'src/app/entities/publicacion';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -11,10 +11,11 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  infoMsg;
   feed: any[];
   eventos : Evento[];
   constructor(private apiService:ApiService, private router: Router) { }
-
+  
   ngOnInit(): void {
     this.apiService.get(ApiService.getFeed).subscribe(data=>{
       if(data.feed){
@@ -40,5 +41,12 @@ export class HomeComponent implements OnInit {
   goTo(goto){
     this.router.navigate([goto]);
   }
-
+  consultarPublicacion(item:Publicacion){
+    this.infoMsg = ""
+    this.router.navigate(['/publicacion', {"id": item.id} ]);
+  }
+  consultarEvento(item:Evento){
+    this.infoMsg = ""
+    this.router.navigate(['/evento', {"id": item.id} ]);
+  }
 }

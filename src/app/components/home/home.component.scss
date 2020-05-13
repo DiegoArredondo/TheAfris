@@ -62,6 +62,13 @@ div.feedP1 {
             margin-bottom: 5%;
         }
     }
+    h3, .pointer{
+      cursor: pointer;
+    }
+
+    h3:hover{
+      color:  #21b2ec;
+    }
 }
 
 div.fulldivider{
@@ -203,6 +210,13 @@ div.eventos {
     
 }
 
+a{
+  color: #21b2ec;
+}
+
+a:hover{
+  color:blue
+}
 
 div.vermas {
   justify-content: center !important;

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
-
+import { Router } from '@angular/router';
+import { Publicacion } from 'src/app/entities/publicacion';
 
 @Component({
   selector: 'app-all-posts',
@@ -9,8 +10,9 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class AllPostsComponent implements OnInit {
   feed: any[];
-  constructor(private apiService:ApiService) { }
-
+  infoMsg;
+  constructor(private apiService:ApiService, private router: Router) { }
+  selectedPublicacion : Publicacion;
   ngOnInit(): void {
     this.apiService.get(ApiService.getFeed).subscribe(data=>{
       if(data.feed){
@@ -18,5 +20,8 @@ export class AllPostsComponent implements OnInit {
       }
     })
   }
-
+  consultarPublicacion(item:Publicacion){
+    this.infoMsg = ""
+    this.router.navigate(['/publicacion', {"id": item.id} ]);
+  }
 }

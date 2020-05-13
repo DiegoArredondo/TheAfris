@@ -1,0 +1,99 @@
+div.evento {
+    width: 60vw;
+  
+    div.encabezado {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+  
+      svg {
+        width: 2vw;
+        max-height: 2vw;
+      }
+    }
+  
+    div.hora {
+      span{
+        margin-left: 3.5em;
+      }
+    
+    }
+  
+    div.imagen {
+      display: flex;
+      align-items: center;
+      button {
+        width: 12.5em;
+        height: 2.5em;
+      }
+    }
+  
+    div.publicar {
+      justify-content: flex-end !important;
+      button {
+        width: 12.5em;
+        height: 2.5em;
+      }
+    }
+  
+    div.full-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0.75rem 0;
+    }
+  
+    div.half-container {
+      width: 47.5%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    input {
+      height: 2.5em !important;
+      flex-grow: 1;
+      width: calc(100% - 2em);
+    }
+  
+    textarea {
+      height: 25vh;
+      flex-grow: 1;
+    }
+
+    textarea:disabled,
+  textarea[disabled]{
+    background-color: #caf6fa;
+  }
+
+ input:disabled,
+  input[disabled]{
+    background-color: #caf6fa;
+    font-weight: bold;
+  }
+
+  div.regresar {
+    button{
+        margin-top: 30px;
+        margin-bottom: 50px;
+        width: 12.5em;
+        height: 2.5em;
+        margin-left: 40%;
+    }
+  }
+  }
+  
+
+  div.svg-container {
+    width: 2.5em !important;
+    height: 2.5em !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    svg {
+      max-width: 1.5em;
+      max-height: 1.5em;
+    }
+  }
+  

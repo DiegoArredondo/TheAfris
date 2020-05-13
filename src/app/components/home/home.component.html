@@ -10,22 +10,22 @@
     <div class="feedP1">
         <div class="feedGrande">
             <div class="fullFeed">
-                <h3 class="color-gray"> {{feed[0].titulo}} </h3>
+                <h3 class="color-gray" (click)="consultarPublicacion(feed[0])"> {{feed[0].titulo}} </h3>
             </div>
         </div>
 
         <div class="feedDividido">
             <div class="cuartoDeFeed">
-                <h3 class="color-gray"> {{feed[1].titulo}} </h3>
+                <h3 class="color-gray" (click)="consultarPublicacion(feed[1])"> {{feed[1].titulo}} </h3>
             </div>
             <div class="cuartoDeFeed">
-                <h3 class="color-gray"> {{feed[2].titulo}} </h3>
+                <h3 class="color-gray" (click)="consultarPublicacion(feed[2])"> {{feed[2].titulo}} </h3>
             </div>
             <div class="cuartoDeFeed">
-                <h3 class="color-gray"> {{feed[3].titulo}} </h3>
+                <h3 class="color-gray" (click)="consultarPublicacion(feed[3])"> {{feed[3].titulo}} </h3>
             </div>
             <div class="cuartoDeFeed">
-                <h3 class="color-gray"> {{feed[4].titulo}} </h3>
+                <h3 class="color-gray" (click)="consultarPublicacion(feed[4])"> {{feed[4].titulo}} </h3>
             </div>
         </div>
     </div>
@@ -40,8 +40,8 @@
                 </div>
                 <div class="detallePublicacion">
                     <h3 class="color-gray"> {{feed[5].titulo}} </h3>
-                    <p class="color-gray">{{feed[5].titulo}} <p>
-
+                    <p class="color-gray">{{feed[5].contenido}} <p>
+                    <a (click)="consultarPublicacion(feed[5])">Ver más...</a>
                 </div>
             </div>
         </div>
@@ -53,8 +53,8 @@
                 </div>
                 <div class="detallePublicacion">
                     <h3 class="color-gray"> {{feed[6].titulo}} </h3>
-                    <p class="color-gray">{{feed[6].titulo}} <p>
-
+                    <p class="color-gray">{{feed[6].contenido}} <p>
+                        <a  (click)="consultarPublicacion(feed[6])" >Ver más...</a>
                 </div>
             </div>
         </div>
@@ -99,7 +99,7 @@
                         <p class="color-gray">{{eventos[0].ubicacion}}</p>
                    </div>
                 <p class="color-gray" id="descripcionEvento">{{eventos[0].descripcion}}<p> 
-                        <a href="http://localhost:4200/eventos">Read more...</a>        
+                        <a  (click)="consultarEvento(eventos[0])">Ver más...</a>        
             </div>
         </div>
 
@@ -130,7 +130,7 @@
                         <p class="color-gray">{{eventos[1].ubicacion}}</p>
                    </div>
                 <p class="color-gray" id="descripcionEvento">{{eventos[1].descripcion}}<p> 
-                        <a href="http://localhost:4200/eventos">Read more...</a>        
+                        <a (click)="consultarEvento(eventos[1])">Ver más...</a>        
             </div>
         </div>
 

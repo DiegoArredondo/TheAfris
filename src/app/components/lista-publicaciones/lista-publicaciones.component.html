@@ -10,22 +10,28 @@
                     data-original="#000000" class="active-path" data-old_color="#000000" fill="#3498DB" />
             </svg>
         </div>
-    </div>
-    <div class="editorPublicacion">
-        <div class="imagenPublicacion full-container">
-         
-            <img id="imagen" > 
+    </div>   
+            <div class="feedP2">
+                <div class="publicacion" *ngFor="let pub of feed; let i = index">
+                    <div class="full" *ngIf="i >= 1">
+                        <div class="imagenPublicacion">
+                            <img id="imagen">
+                        </div>
+                        <div class="detallePublicacion">
+                            <h3 class="color-gray"> {{feed[i].titulo}} </h3>
+                            <p class="color-gray">{{feed[i].contenido}}<p>
+        
+                        </div>
+                        <div class="botonesEditarPublicacion full-container">
+            <button id="btnEditar" class="btn" (click)="editar(pub)"></button>
+            <button id="btnEliminar" class="btn"(click)="eliminar(pub)" ></button>
         </div>
-        <div class="detallePublicacion full-container">
-            <h3 class="color-gray"> Nombre Publicación </h3>
-            <p class="color-gray">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at accumsan elit. In sit amet odio ultricies, laoreet enim et, cursus nunc. <p>
-                
-        </div>
-        <div class="botonesEditarPublicacion full-container">
-            <button id="btnEditar" class="btn"></button>
-            <button id="btnEliminar" class="btn"></button>
-        </div>
-
-    </div>
+                    </div>
+                </div>
+            </div>
 
 </div>
+
+
+
+<app-confirm-modal *ngIf="modalMsg" (resp)="respuestaModal($event)" [message]="modalMsg"></app-confirm-modal>

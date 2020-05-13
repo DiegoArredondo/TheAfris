@@ -39,6 +39,9 @@ export class AllEventsComponent implements OnInit {
     let hour = Number.parseInt(usableTime[0])
     return (hour > 12 ? hour-12 : hour) + ":" + usableTime[1] + (hour>=12 ? " P.M." : " A.M.")
   }
-
+  consultarEvento(item:Evento){
+    this.infoMsg = ""
+    this.router.navigate(['/evento', {"id": item.id} ]);
+  }
 
 }

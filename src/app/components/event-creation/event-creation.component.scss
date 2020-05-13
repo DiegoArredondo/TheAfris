@@ -63,6 +63,16 @@ div.evento {
     height: 25vh;
     flex-grow: 1;
   }
+
+  div.regresar {
+    button{
+        margin-top: 30px;
+        margin-bottom: 50px;
+        width: 12.5em;
+        height: 2.5em;
+        margin-left: 40%;
+    }
+  }
 }
 
 div.svg-container {

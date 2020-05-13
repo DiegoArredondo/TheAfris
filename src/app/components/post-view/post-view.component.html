@@ -1,0 +1,18 @@
+<div class="publicacion">
+    <form class="form" [formGroup]="createPostForm">
+     
+        <div class="titulo full-container">
+            <input type="text" id="titulo" name="titulo" placeholder="Título*"
+                formControlName="titulo" disabled>
+        </div>
+
+
+
+        <div class="contenido">
+            <textarea id="contenido" name="contenido" placeholder="Nueva Publicación*"
+                formControlName="contenido" disabled> </textarea>
+        </div>
+
+
+    </form>
+</div>

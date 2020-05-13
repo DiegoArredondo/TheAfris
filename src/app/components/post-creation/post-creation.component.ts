@@ -73,7 +73,7 @@ export class PostCreationComponent implements OnInit {
         this.infoMsg = data.error + "";
         this.errorMsg = true;
       } else {
-        this.infoMsg = "La publicación '" + publicacion.titulo + "' ha sido creada con éxito";
+        this.infoMsg = "La publicación '" + publicacion.titulo + "' ha sido actualizada con éxito";
         this.errorMsg = false;
       }
     }, error => {

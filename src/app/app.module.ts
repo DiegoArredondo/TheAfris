@@ -29,6 +29,8 @@ import { RegistrarUsuarioComponent } from './components/registrar-usuario/regist
 import { HomeComponent } from './components/home/home.component';
 import { AllPostsComponent } from './components/all-posts/all-posts.component';
 import { AllEventsComponent } from './components/all-events/all-events.component';
+import { EventViewComponent } from './components/event-view/event-view.component';
+import { PostViewComponent } from './components/post-view/post-view.component';
 
 
 @NgModule({
@@ -50,6 +52,8 @@ import { AllEventsComponent } from './components/all-events/all-events.component
     HomeComponent,
     AllPostsComponent,
     AllEventsComponent,
+    EventViewComponent,
+    PostViewComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,35 +1,13 @@
 div.publicacion {
-    width: 40vw;
+    width: 70vw;
   
     div {
       display: flex;
       align-items: center;
-    }
-  
-    svg {
-      width: 2vw;
-      max-height: 2vw;
-    }
-  
-    div.seccion{
-      svg{
-        margin: 0 .5em;
-      }
-    }
-  
+    }  
     div.contenido {
       justify-content: flex-end;
       margin-bottom: 2em;
-    }
-  
-    div.boton {
-      justify-content: flex-end;
-      margin-bottom: 2em;
-      button {
-        height: 2.5em;
-        width: 15em;
-        font: bold;
-      }
     }
   }
   
@@ -45,17 +23,25 @@ div.publicacion {
     height: 2.5em !important;
     flex-grow: 1;
     width: calc(100% - 2em);
+    font-weight: bold;
+    border: hidden;
   }
   textarea {
     height: 25vh;
     flex-grow: 1;
+    enable-background: fa;
+    font-size: 1em;
   }
-  
-  select{
-    background: none;
-    height: 2.5em;
+  textarea:disabled,
+  textarea[disabled]{
+    background-color: #caf6fa;
   }
-  
+
+ input:disabled,
+  input[disabled]{
+    background-color: #caf6fa;
+  }
   select, input{
-    font-size: .86em;
+    font-size: 1.5em;
+    
   }
