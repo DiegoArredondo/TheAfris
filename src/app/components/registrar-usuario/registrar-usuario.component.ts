@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { Evento } from 'src/app/entities/evento';
+import { MatDatepicker } from '@angular/material/datepicker';
 import { ApiService } from 'src/app/services/api.service';
 import { Usuario } from 'src/app/entities/usuario';
 @Component({
@@ -31,6 +32,10 @@ export class RegistrarUsuarioComponent implements OnInit {
     return this.createUserForm.controls;
   }
 
+  _openCalendar(picker: MatDatepicker<Date>) {
+    picker.open();
+  }
+
   onSubmit(){
     this.infoMsg="";
     this.errorMsg=false;
@@ -40,6 +45,8 @@ export class RegistrarUsuarioComponent implements OnInit {
       this.posted=false;
       return;
     }
+
+
 
   let usuario={
     "nombre": this.f.nombre.value,

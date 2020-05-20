@@ -5,6 +5,8 @@ div.feedP1 {
     justify-content: space-between;
     height: 50vh;
 
+    
+
     div.feedGrande {
         width: 47.5%;
         height: 100%;
@@ -111,4 +113,27 @@ a{
   
   a:hover{
     color:blue
+  }
+
+  div.encabezado {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    svg {
+      width: 2vw;
+      max-height: 2vw;
+    }
+
+    a{
+      color: #10546e;
+      size: 30px;
+      text-decoration: underline;
+      font-weight: bold;
+      margin-left: 40em;
+    }
+  
+    a:hover{
+      color: #21b2ec;
+    }
   }

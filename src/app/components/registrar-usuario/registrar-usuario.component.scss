@@ -13,20 +13,31 @@ div.registrarUsuario {
         align-items: center;
       }
 
+      div.row-container {
+        margin-bottom: 2em;
+      }
+
       div.svg-icon{
         width: 3vw;
 
         svg{
           width: 2vw;
           max-height: 2vw;
-          fill: #A7A7A7;
+          fill: #21b2ec;
         }
       }
+
       input {
         height: 2.5em !important;
         flex-grow: 1;
         margin-left: 5px;
-        width: calc(100% - 2em);
+        width: 30rem;
+      }
+
+      input[type=date]{
+        width: 10rem;
+        font-size: 15px;
+        outline: none;
       }
 
       div.registrar {
@@ -62,6 +73,13 @@ div.registrarUsuario {
             margin-left: 10px;
         }
     }
+
+    div.text-box {
+      textarea{
+        width: 30rem;
+      }
+    }
+
   }
 
     svg {

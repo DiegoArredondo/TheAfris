@@ -9,6 +9,18 @@ div.listaEventos {
         width: 2vw;
         max-height: 2vw;
       }
+
+      a{
+        color: #10546e;
+        size: 30px;
+        text-decoration: underline;
+        font-weight: bold;
+        margin-left: 28em;
+      }
+    
+      a:hover{
+        color: #21b2ec;
+      }
     }
   
     div.editorEventos {

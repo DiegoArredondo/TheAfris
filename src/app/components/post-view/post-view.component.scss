@@ -9,6 +9,18 @@ div.publicacion {
       justify-content: flex-end;
       margin-bottom: 2em;
     }
+ 
+    a{
+      color: #10546e;
+      size: 30px;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    a:hover{
+      color: #21b2ec;
+    }
+
   }
   
   div.full-container {
@@ -45,3 +57,5 @@ div.publicacion {
     font-size: 1.5em;
     
   }
+
+  
