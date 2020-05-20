@@ -67,7 +67,4 @@ export class EventViewComponent implements OnInit {
   }
   get f() { return this.editEventForm.controls; }
 
-  goTo(goto){
-    this.router.navigate([goto]);
-  }
 }

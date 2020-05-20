@@ -17,23 +17,15 @@ export class PostCreationComponent implements OnInit {
   createPostForm: FormGroup;
   submitted = false;
 
-  date = new FormControl(new Date());
+
   time: String;
 
-  eventoMockup = {
-    "titulo": "Titulo del evento",
-    "contenido": "contenido de prueba",
-    "etiquetas": "#etiqueta1,#etiqueta2,#etiqueta3",
-    "creador": 1,
-    "seccion": 1
-  } as Publicacion;
 
   posted: boolean = false;
 
 
   constructor(private formBuilder: FormBuilder, private apiService: ApiService) {
-    // Preguntar si quieren tener hora predeterminada
-    this.time = "4:00 pm"
+   
   }
 
   ngOnInit(): void {
@@ -67,6 +59,7 @@ export class PostCreationComponent implements OnInit {
     } as Publicacion;
 
     this.posted = true;
+    
     this.apiService.post(ApiService.createPostUrl, publicacion).subscribe(data => {
       debugger;
       if (data.error) {

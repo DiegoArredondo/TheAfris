@@ -14,8 +14,6 @@ export class ApiService {
   static createPostUrl = "postPost"
   static updatePostUrl = "updatePost"
   static deletePostUrl = "deletePost"
-
-
   static getUserById = "getUser"
   static getEventById = "getEvent"
   static getPostById = "getPost"
@@ -25,6 +23,8 @@ export class ApiService {
   static getAllPosts = "getAllPosts"
 
   static getFeed = "getFeed"
+  static createUserUrl="register"
+  static logInUserUrl="login"
 
   private baseUrl: string = "https://theafrisback.appspot.com/";
 

@@ -8,8 +8,10 @@
         </p>
     </div>
 
-    <form class="form">
-        
+    <form class="form" [formGroup]="logInUserForm" (ngSubmit)="onSubmit()">
+        <div class="full-container" [ngClass]="{'color-red': errorMsg}" *ngIf="infoMsg">
+            {{infoMsg}}
+        </div>
         <div class="full-container">
             <div class="half-container">
                 <svg class="login" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -21,7 +23,7 @@
                 <h4 class="color-gray">Usuario</h4>
             </div>
         </div> 
-        <input type="text" id="usuario" name="usuario" placeholder="Usuario*" formControlName="usuario" required>
+        <input type="text" id="usuario" name="usuario" placeholder="Usuario*" formControlName="correo" required>
 
             
     <div class="full-container">
@@ -35,7 +37,7 @@
     <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña*" formControlName="contrasena" required>
 
         <div class="iniciarsesion">
-            <button type="submit" class="btn"><b>Iniciar sesión</b></button>
+            <button type="submit" class="btn" (click)="onSubmit()"><b>Iniciar sesión</b></button>
         </div>
 
     </form>

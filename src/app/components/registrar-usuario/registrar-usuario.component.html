@@ -1,4 +1,5 @@
 <div class="registrarUsuario">
+    
     <div class="encabezado">
         <h2 class="color-gray">Registrarse</h2>
         <div class="svg-container"></div>
@@ -8,8 +9,10 @@
         </p>
     </div>
 
-    <form class="form">
-        
+    <form class="form" [formGroup]="createUserForm" (ngSubmit)="onSubmit()">
+        <div class="full-container" [ngClass]="{'color-red': errorMsg}" *ngIf="infoMsg">
+            {{infoMsg}}
+        </div>
         <div class="full-container">
             <div class="half-container">
         
@@ -25,7 +28,7 @@
                 </div>
                 <h4 class="color-gray">Nombre(s)</h4>
             </div>
-        
+           
             <div class="half-container">
                 <h4 class="color-gray">Apellido(s)</h4>
             </div>
@@ -36,7 +39,7 @@
                 <input type="text" id="nombre" name="nombre" formControlName="nombre" required>
             </div>
             <div class="half-container">
-                <input type="text" id="apellido" name="apellido" formControlName="apel" required>
+                <input type="text" id="apellido" name="apellido" formControlName="apellido" required>
             </div>
         </div>
        
@@ -92,7 +95,7 @@
         </div>
         
         <div class="registrar">
-            <button type="submit" class="btn"><b>Registrarse</b></button>
+            <button type="submit" class="btn" (click)="onSubmit()"><b>Registrarse</b></button>
         </div>
 
     </form>
